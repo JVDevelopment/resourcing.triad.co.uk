@@ -1,0 +1,1058 @@
+/*
+* Triad Solutions
+* Copyright 2013
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+
+/* Lightbox Form */
+
+.backdrop
+		{
+			position:fixed;
+			display:block;
+			top:0px;
+			left:0px;
+			width:100%;
+			height:100%;
+			background:#000;
+			opacity: .0;
+			filter:alpha(opacity=0);
+			z-index:50;
+			display:none;
+		}
+ 
+ 
+		.box
+		{
+			position:absolute;
+			top:20%;
+			left:30%;
+			width:400px;
+			background:#ffffff;
+			z-index:51;
+			padding:30px 10px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			-moz-box-shadow:0px 0px 5px #444444;
+			-webkit-box-shadow:0px 0px 5px #444444;
+			box-shadow:0px 0px 5px #444444;
+			display:none;
+		}
+ 
+		.close
+		{
+			position:absolute;
+			top:10px;
+			right:10px;
+			cursor:pointer;
+		}
+
+		#contact-form h5 {
+			display:block;
+			text-align:center;
+			margin:0 0 20px;
+		}
+
+/* Job Details Pages */
+
+	.jobItem {
+		border-top:1px solid #ba4097;
+		margin-bottom:20px;
+		padding-top:20px;
+	}
+
+	.jobItem h4 {
+		color:#ba4097;
+	}
+
+	.jobDetails {
+		color:#939597;
+	}
+
+	.paginationL { float:left;}
+
+	.paginationR { float:right;}
+
+
+/* #Site Styles
+================================================== */
+
+	i.icon-light {
+		color:#939597;
+	}
+
+	i.icon-white {
+		color:#ffffff;
+	}
+
+	#content {
+		margin:20px 0 0;
+	}
+
+	#homeTitle {
+		text-align:center;
+		padding: 40px 0 0;
+	}
+
+	#searchJobs {
+		display:none;
+	}
+
+	#searchJobs .row {
+		padding:20px 0;
+		background-image: linear-gradient(bottom, rgb(241,241,242) 0%, rgb(230,231,232) 72%);
+		background-image: -o-linear-gradient(bottom, rgb(241,241,242) 0%, rgb(230,231,232) 72%);
+		background-image: -moz-linear-gradient(bottom, rgb(241,241,242) 0%, rgb(230,231,232) 72%);
+		background-image: -webkit-linear-gradient(bottom, rgb(241,241,242) 0%, rgb(230,231,232) 72%);
+		background-image: -ms-linear-gradient(bottom, rgb(241,241,242) 0%, rgb(230,231,232) 72%);
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgb(241,241,242)),
+			color-stop(0.72, rgb(230,231,232))
+		);
+	}
+
+	.expertiseicon {
+		display:block;
+		color:#fff;
+		position:relative;
+		cursor:pointer;
+	}
+
+	.expertiseicon {
+		perspective: 1000;
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+	}
+
+	.expertiseicon:hover .flipper, .expertiseicon.hover .flipper {
+		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+	}
+
+	.expertiseicon, .front, .back {
+	width: 236px;
+	height: 236px;
+}
+
+	.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+    -ms-backface-visibility:hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.ie8 .flipper:hover .front  {
+    visibility:hidden;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 10;
+	background:#d1d2d4;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	background:#ba4097;
+}
+
+	.expertiseicon .findMore {
+		position:absolute;
+		text-align:center;
+		color:#fff;
+		font-size:13px;
+		line-height:13px;
+		width:100%;
+		height:30px;
+		bottom:0;
+	}
+
+	.expertiseicon .findMore i {
+		color:#fff;
+		font-size:13px;
+	}
+
+	.expertiseicon .back .icon-expertise {
+		display:block;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  		filter: alpha(opacity=10);
+ 		 -moz-opacity: 0.1;
+  		-khtml-opacity: 0.1;
+  		opacity: 0.1;
+	}
+
+	.expertiseicon .back p {
+		line-height:normal;
+		display:block;
+		padding:20px;
+		text-align:left;
+		margin-top:40px;
+	}
+
+	.expertiseicon .icon-expertise {
+		position:absolute;
+		text-align:center;
+		color:#fff;
+		font-size:110px;
+		height:100%;
+		width:100%;
+		line-height:inherit;
+	}
+
+	.expertiseicon h5 {
+		color:#fff;
+		position:absolute;
+		font-weight:bold;
+		top:20px;
+		margin:0 auto;
+		left:0;
+		right:0;
+		text-align:center;
+	}
+
+	#processDiagram {
+		width:100%;
+		display:block;
+		background: #F1F1F2 url(../images/bg_overlay.png) center top no-repeat;
+	}
+
+	#processDiagram h5 {
+		font-weight:bold;
+	}
+
+	#processDiagram ul {
+		margin-bottom:0;
+	}
+
+	#processDiagram .column {
+		padding-top: 20px;
+	}
+/*
+	#processDiagram p {
+		line-height:14px;
+		font-size:12px;
+	}
+*/
+	.process-icon {
+		padding:0;
+		background-image:url(../images/icon-triad.png);
+		background-repeat:no-repeat;
+		background-position:center left;
+		background-size:contain;
+		height:380px;
+	}
+
+	h5.diaPeople {
+		color:#9363CC;
+	}
+
+	h5.diaInfo {
+		color:#3E8DDD;
+	}
+
+	h5.diaProcess {
+		color:#00AFA9;
+	}
+
+	#processDiagram .processRight {
+		background:#fff;
+		float:right;
+	}
+
+	#processDiagram .processRight li {
+		margin:0;
+		cursor:pointer;
+	}
+
+	#processDiagram .processRight li.active, #processDiagram .processRight li:hover{
+		background-color:#231F20;
+		color:#fff;
+	}
+
+	#processDiagram .processRight li.active h5, #processDiagram .processRight li:hover h5, #processDiagram .processRight li.active p, #processDiagram .processRight li:hover p {
+		color:#fff;
+	}
+
+	[class^="process-"], [class*="process-"] {
+		padding:8px 0 8px;
+	}
+
+	.processIcon {
+		background-position: left top;
+		background-repeat:no-repeat;
+		width:40px;
+		height:40px;
+		margin:10px;
+		float:left;
+	}
+
+	#processDiagram .processRight li.active .processIcon, #processDiagram .processRight li:hover .processIcon{
+		background-position:-40px top;
+	}
+
+	#processDiagram .processRight h5 {
+		margin:0 0 0 60px;
+		color:#999;
+		font-size:15px;
+		line-height:17px;
+	}
+
+	#processDiagram .processRight p {
+		color:#999;
+		margin:0 0 0 60px;
+	}
+
+
+	[class^="diaContent-"], [class*="diaContent-"] {
+		display:none!important;
+		padding:5px 0 0 0;
+	}
+
+	.agile .diaContent-agile, .delivery .diaContent-delivery, .insights .diaContent-insights, .mobile .diaContent-mobile, .sharepoint .diaContent-sharepoint   {
+		display:inline!important;
+	}
+
+	.process-agile .processIcon {
+		background-image: url(../images/process-agile.png);
+	}
+
+	.process-delivery .processIcon {
+		background-image: url(../images/process-delivery.png);
+	}
+
+	.process-insights .processIcon {
+		background-image: url(../images/process-insights.png);
+	}
+
+	.process-mobile .processIcon {
+		background-image: url(../images/process-mobile.png);
+	}
+
+	.process-sharepoint .processIcon {
+		background-image: url(../images/process-sharepoint.png);
+	}
+
+#headerWrap {
+	min-height:50px;
+	background:#404041;
+	padding:0;
+	margin:0 auto;
+	border-bottom:10px solid #fff;
+}
+
+.bannerText {
+	margin-top:60px;
+	display:block;
+	height:530px;
+}
+
+.bannerText h4, .bannerText h1 {
+	color:#fff;
+}
+
+#contactPopup {
+		display:block;
+		position:absolute;
+		background:#fff;
+		height:auto;
+		right:10px;
+		top:-700px;
+		z-index:999;
+		padding:0;
+		font-size:18px;
+		border-radius: 10px 0px 0px 0px; 
+		-moz-border-radius: 10px 0px 0px 0px; 
+		-webkit-border-radius: 10px 0px 0px 0px;
+		-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+		box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	}
+
+	#contactPopup .icon-stack-base {
+		color:#ba4097;
+	}
+
+	#contactPopup .icon-light {
+		color:#fff;
+	}
+
+	#contactPopup .contactLeftCont {
+		width:340px;
+		min-height:580px;
+		float:left;
+	}
+
+	#contactPopup .contactLeft {
+		padding:20px;
+		display:block;
+	}
+
+	#messageClose {
+		display:block;
+		position:absolute;
+		right:10px;
+		top:10px;
+		cursor:pointer;
+		color:#fff;
+	}
+
+	#contactPopup .contactRightCont {
+		width:340px;
+		min-height:580px;
+		background:#ba4097;
+		float:right;
+		display:none;
+	}
+    .ie8 #contactPopup .contactRightCont {
+		width:340px;
+		min-height:580px;
+		background:#ba4097;
+		float:right;
+		display:none;
+	}
+
+	#contactPopup .contactRight {
+		padding:70px 0 0;
+		display:block;
+	}
+
+	#contactPopup .contactRight label {
+		color:#fff;
+		padding:2px 0;
+	}
+
+	#contactPopup a {
+		text-decoration:none;
+		color:#ba4097;
+	}
+
+	#contactPopup a:hover {
+		color:#444;
+	}
+
+	#contactPopup .icon-stack {
+		font-size:1.7em;
+		line-height:1.7em;
+		float:left;
+		clear:left;
+	}
+
+	#contactPopup ul li {
+		margin-bottom:0;
+	}
+
+	#contactPopup ul li li {
+		margin-bottom:4px;
+	}
+
+	#contactPopup .contactContent {
+		display:block;
+		min-height:61px;
+		margin-left:82px;
+		padding-top:15px;
+	}
+
+
+	#contactPopup .sendContent {
+		display:block;
+		min-height:61px;
+		margin-left:82px;
+		padding-top:15px;
+		color:#fff;
+	}
+
+	#contactPopup .mapLink {
+		margin-top:15px;
+	}
+
+	.mapList li {
+		margin-bottom:0;
+	}
+
+	ul.mapList {
+		margin-bottom:5px;
+	}
+
+	#messageSend {
+		display: block;
+		height: 50px;
+		background: #333;
+		margin: 0;
+		padding: 20px;
+		cursor: pointer;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 300px;
+	}
+
+	#messageSendr {
+		display: none;
+		height: 50px;
+		background: #333;
+		margin: 0;
+		padding: 20px;
+		cursor: pointer;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 300px;
+	}
+
+	#messageSendr:hover, #messageSend:hover {
+		background:#444;
+	}
+
+#jobSearch {
+	display:block;
+	position:absolute;
+	bottom:0;
+	background:#58585b;
+	margin:0;
+	padding:12px 0;
+	cursor:pointer;
+	z-index:999;
+}
+
+#jobSearch:hover {
+	background:#000;
+}
+
+
+#jobSearch.active {
+	background:#f1f1f1;
+}
+
+#jobSearch.active i,
+#jobSearch.active h3 {
+	color:#cd25af;
+	}
+
+#jobSearch .columns {
+	margin-bottom:0;
+}
+
+#jobSearch .jobDropdown {
+	display:block;
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+
+#jobSearch h3 {
+	margin:0;
+	padding:0;
+	color:#939597;
+	}
+
+#headerBanner {
+	height: 180px;
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background-color: #dddddd;
+	background-image: url(../images/header_floral.png);
+	background-repeat: no-repeat;
+	background-position: center -90px;
+}
+
+#headerBanner h2 {
+	margin-top:40px;
+	color:#6d6e70;
+}
+
+#logo {
+	display:block;
+	float:left;
+	width:181px;
+	overflow:hidden;
+	height:50px;
+}
+
+/*#logo:after {
+	display:block;
+	content: " ";
+	width:50px;
+	height:52px;
+	background:#333 url(../images/tabr.png);
+	}*/
+
+#searchBox {
+	display:inline;
+	float:right;
+	margin:0 50px 0 0;
+	height:50px;
+}
+
+
+#searchBox input {
+	margin-top:16px;
+}
+
+#headerWrap nav {
+	display:inline;
+	float:left;
+}
+
+#headerWrap nav ul {
+	list-style-type:none;
+	margin:0;
+}
+#headerWrap nav ul li {
+	float:left;
+	display:block;
+	width:auto;
+	height:50px;
+	line-height:50px;
+	padding:0 20px 0 10px;
+	margin:0;
+	}
+
+	#headerWrap nav ul li a {
+		font-size:90%;
+		font-weight:normal;
+		color:#BBBDBF;
+		text-decoration:none;
+	}
+	
+	#headerWrap nav ul li a:hover, #headerWrap nav ul li.active a {
+		color:#fff;
+	}
+
+
+	#menuicons{
+		display:block;
+		padding: 13px 19px 0 0;
+		float:right;
+		}
+
+	.menu-icon {
+		width:16px;
+		height:16px;
+		background:url(../images/icon-menu.png) no-repeat left top;
+		margin:0 10px 0 0;
+		cursor:pointer;
+	}
+
+	.search-icon {
+		width:16px;
+		height:16px;
+		background:url(../images/icon-search.png) no-repeat left top;
+		margin:0 10px 0 0;
+	}
+
+	.linkedin-icon {
+		width:16px;
+		height:16px;
+		background:url(../images/icon-linkedin.png) no-repeat left top;
+		display:inline-block;
+	}
+
+
+	.sidePanel {
+		padding-bottom:10px;
+		margin-bottom:15px;
+		border-bottom:1px solid #D0D1D2;
+	}
+
+	.sidePanel ul {
+		margin:0;
+	}
+
+	/* Icons */
+
+	[class^="icon-"], [class*=" icon-"] {
+display: inline-block;
+width: 14px;
+height: 14px;
+margin-top: 1px;
+margin-right:5px;
+line-height: 14px;
+vertical-align: text-top;
+}
+
+.icon-enquiry {
+	background-image: url("../images/icon-email.png");
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+.icon-phone {
+	background-image: url("../images/icon-phone.png");
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+
+	/* #Footer Styles
+================================================== */
+
+	footer {
+		font-size:12px;
+		background:#f1f1f2 url('../images/trfbg.png') no-repeat top right;
+		padding: 10px 0 30px 0;
+		border-top:1px solid #D0D1D2;
+		color:#878c90;
+	}
+
+	footer h5 {
+		margin-bottom:16px;
+		color:#878c90;
+	}
+
+	footer .copyright {
+		text-align:center;
+	}
+
+	footer .columns a {
+		color:#878c90;
+	}
+
+	footer .columns li {
+		margin-bottom:7px;
+	}
+
+	footer .columns a:hover {
+		color:#222;
+	}
+
+	footer .columns {
+		padding-top:10px;
+	}
+
+	#processDiagram .whyTriad {
+		display: block;
+		background: white;
+		padding: 10px;
+		text-align: center;
+		margin-top:60px;
+	}
+
+	#OurPeople .icon-stack {
+		float:right;
+		margin-top:-24px;
+	}
+
+	#clients {
+		background:#d1d2d4;
+		padding:20px;
+	}
+
+	#clients .row,
+	#clients .bxslider {
+		margin:0;
+	}
+
+	#clients .clients-list li {
+		display:inline;
+	}
+
+	#pullquote img {
+		margin:0 10px 10px 0;
+	}
+
+	.cbp-fwslider {
+    position: relative;
+    margin: 0 0 10px;
+    overflow: hidden;
+    padding: 40px 0 60px;
+}
+ 
+.cbp-fwslider ul {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    list-style-type: none;
+}
+ 
+.cbp-fwslider ul li {
+    transform: translateZ(0);
+    float: left;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+ 
+.cbp-fwslider ul li > a,
+.cbp-fwslider ul li > div {
+    display: block;
+    text-align: center;
+    outline: none;
+}
+ 
+.cbp-fwslider ul li > a img {
+    border: none;
+    display: block;
+    margin: 0 auto;
+    max-width: 75%;
+}
+ 
+.cbp-fwslider nav span {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 100px;
+    background: #47a3da;
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    margin-top: -50px;
+    line-height: 100px;
+    cursor: pointer;
+    font-weight: normal;
+}
+ 
+.cbp-fwslider nav span:hover {
+    background: #378fc3;
+}
+ 
+.cbp-fwslider nav span.cbp-fwnext {
+    right: 0px;
+}
+ 
+.cbp-fwslider nav span.cbp-fwprev {
+    left: 0px;
+}
+ 
+.cbp-fwdots {
+    position: absolute;
+    bottom: 0px;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+}
+ 
+.cbp-fwdots span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: #ddd;
+    margin: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+ 
+.cbp-fwdots span:hover {
+    background: #999;
+}
+ 
+.cbp-fwdots span.cbp-fwcurrent {
+    background: #47a3da;
+    box-shadow: 0 0 0 2px #47a3da;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+
+.nbs-flexisel-container {
+    position:relative;
+    max-width:100%;
+}
+.nbs-flexisel-ul {
+    position:relative;
+    width:9999px;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;   
+    text-align:center;  
+}
+
+.nbs-flexisel-inner {
+    overflow:hidden;
+    float:left;
+    width:100%;
+}
+
+.nbs-flexisel-item {
+    float:left;
+    margin:0px;
+    padding:0px;
+    cursor:pointer;
+    position:relative;
+    line-height:0px;
+}
+.nbs-flexisel-item img {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width:100px;
+    max-height:45px;
+}
+
+.sliderbox {
+    /*background:#ccc;*/
+    background:#BA4097;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 134px;
+    position: relative;
+    width: 100%;
+    margin:0 auto;  
+    height:85px;  
+    line-height:85px;
+}
+
+.sliderbox:hover {
+    background:#ca5aaa;
+    /*background:#BA4097;*/
+        
+}
+.sliderbox h6 {
+    /*color: #777777;*/
+    color: #ffffff;
+    font-weight: bold;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+    
+}
+.sliderbox:hover h6 {
+   color:#ffffff;
+   
+    
+}
+.sliderbox i {
+    color: #FFFFFF;
+    height: 100%;
+    line-height: inherit;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    line-height:inherit;
+    margin-right:0;
+    right:0;
+    top:0;
+    z-index:1;
+    font-size:50px;
+    opacity:0.3;
+}
+#align{
+    display:inline-block;
+    vertical-align:middle;
+}
+
+/*** Navigation ***/
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+    width: 22px;
+    height: 22px; 
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0.5;
+}
+
+.nbs-flexisel-nav-left {
+    left: -10px;
+    background: url(../images/button-previous.png) no-repeat;
+}
+
+.nbs-flexisel-nav-right {
+    right: -13px;
+    background: url(../images/button-next.png) no-repeat;
+}
+
+iframe {
+    width: 100%;
+}
+
+
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		#jobSearch {
+			position:relative;
+		}
+
+		.expertiseicon .description p {
+			font-size: 12px;
+		}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		#jobSearch {
+			position:relative;
+		}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		#jobSearch {
+			position:relative;
+		}
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		#jobSearch {
+			position:relative;
+		}
+     
+	}
+
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/

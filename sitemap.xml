@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://resourcing.triad.co.uk/</loc>
+  <lastmod>2014-03-03T14:49:26+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://resourcing.triad.co.uk/whytriad.html</loc>
+  <lastmod>2014-03-03T14:50:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://resourcing.triad.co.uk/whoweare.html</loc>
+  <lastmod>2014-03-03T14:49:58+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://resourcing.triad.co.uk/expertise.html</loc>
+  <lastmod>2014-03-03T14:49:52+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://resourcing.triad.co.uk/candidates.aspx</loc>
+  <lastmod>2014-03-03T14:49:43+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://resourcing.triad.co.uk/contact.html</loc>
+  <lastmod>2014-03-03T14:49:48+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>

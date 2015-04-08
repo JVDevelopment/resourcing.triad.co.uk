@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /aspnet_client/
+Disallow: /App_Code/
+Disallow: candidates.html
+
+User-agent: Libwww-perl
+Disallow: /
