@@ -26,7 +26,9 @@
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
-   
+   <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552d28e03f0b5543" async="async"></script>
+
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -171,10 +173,11 @@
 
          <button class="appFormOpen" onclick="applicationForm(); return false;">Apply</button>     
 			
+		<div class="addthis_sharing_toolbox"></div>
 
             			<div id="applicationForm" class="sixteen columns contentbox lb">
                <div class="contentpadding">
-                   <h2>Application Form</h2>
+                   <h3>Application Form</h3>
              <ul>                            
                              <li>
                                 <label for="appName" id="appName">Name</label>
@@ -182,11 +185,11 @@
                             </li>
                              <li>
                                 <label for="appEmail" id="appEmail">Email</label>
-                                <input type="text" name="appEmail" placeholder="Email" />
+                                <input type="email" name="appEmail" placeholder="Email" required/>
                             </li>
                             <li>
                                 <label for="appNumber" id="appNumber">Phone</label>
-                                <input type="text" name="appNumber" placeholder="Phone" />
+                                <input type="tel" name="appNumber" placeholder="Phone" />
                             </li>
                              <li>
                                 <label for="appMessage" id="appMessage">Message</label>
@@ -194,7 +197,7 @@
                             </li>
                               <li>
                                 <label class="custom-file-upload" for="appCV" id="appCV">Upload CV</label>
-                                <span class="btn btn-default btn-file btn-primary">Browse... <INPUT id="oFile" type="file" runat="server" NAME="oFile" accept=".docx,.doc,.pdf"></span>
+                                <span class="btn btn-default btn-file btn-primary">Upload CV<INPUT id="oFile" type="file" runat="server" NAME="oFile" accept=".docx,.doc,.pdf"></span>
                                   <span class="inputval"></span>
                                 
                             </li>
@@ -227,49 +230,7 @@
         <br /> <br /> <br />
 
         
-           <%--<div id="applicationForm" class="sixteen columns contentbox lb">
-               <div class="contentpadding">
-                   <h2>Application Form</h2>
-                    <form name="applicationForm" method="post" action="applicationForm.aspx">
-                        <ul>                            
-                             <li>
-                                <label for="appName" id="appName">Name</label>
-                                <input type="text" name="appName" placeholder="Name" />
-                            </li>
-                             <li>
-                                <label for="appEmail" id="appEmail">Email</label>
-                                <input type="text" name="appEmail" placeholder="Email" />
-                            </li>
-                            <li>
-                                <label for="appNumber" id="appNumber">Phone</label>
-                                <input type="text" name="appNumber" placeholder="Phone" />
-                            </li>
-                             <li>
-                                <label for="appMessage" id="appMessage">Message</label>
-                                <textarea name="appMessage" placeholder="Message" rows="6"></textarea>
-                            </li>
-                              <li>
-                                <label class="custom-file-upload" for="appCV" id="appCV">Upload CV</label>
-                                <span class="btn btn-default btn-file btn-primary">Browse... <input type="file" name="appCV" id="appCV2" runat="server"></span>
-                                
-                            </li>
-                            <li>
-                                <label for="appJob" id="appJob">Position</label>
-                                <input class="appJob" type="text" name="appJob" />
-                            </li>
-                             <li>
-                                <label for="appContact" id="appContact">Contact</label>
-                                <input class="appContact" type="text" name="appContact"/>
-                            </li>
-                              <li>
-                                <button>Submit</button>
-                                  
-                            </li>
-                        </ul>
-
-                    </form>
-                </div>
-            </div>--%>
+    
 
 	</div>
 	</section>

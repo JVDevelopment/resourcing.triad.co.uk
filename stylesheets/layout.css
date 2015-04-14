@@ -176,7 +176,7 @@ img{border:0px;}
 #SearchBar input[type="submit"]{font-size:16px;background:#cccccc;border:1px solid #cccccc;height:28px;color:#ffffff;}
 #SearchBar input[type="submit"]:hover{border:1px solid #BA4097;background:#BA4097;cursor:pointer;}
 form label{display:inline;}
-button{background:none repeat scroll 0 0 #CCCCCC;border:1px solid #CCCCCC;color:#FFFFFF;font-size:16px;height:33px;margin-right:10px;float:left;margin-bottom:18px;}
+button{background:none repeat scroll 0 0 #CCCCCC;border:1px solid #CCCCCC;color:#FFFFFF;font-size:16px;height:32px;margin-right:4px;float:left;margin-bottom:18px;}
 button:hover{border:1px solid #BA4097;background:#BA4097;cursor:pointer;}
 #Keywords{padding-bottom:2px;}
 .SearchRadio{padding:0 2px 0 0;outline:0;color:#939597;}
@@ -215,6 +215,7 @@ h4{font-size:16px;}
 #ResultsHeading{font-size:14px;}
 #SearchBar{text-align:left;width:100%;padding-left:0px;}
 #SearchBar input[type="text"]{width:280px;}
+.btn, .submitAppForm {box-sizing:border-box !Important;width:100% !important;}
 }
 
 
@@ -222,30 +223,34 @@ h4{font-size:16px;}
  /*                             APPLICATION FORM                                */
  /*-----------------------------------------------------------------------------*/
 
- /*#applicationForm{
+ #applicationForm{
      display:none;
- }*/
+	 font-family:HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ }
 
  #applicationForm label{
-      display:inline-block;
+      display:none;
+	  
       width:100px;
  }
 
  #applicationForm input{
       border:1px solid #ccc;
       border-radius:0px;
+	  box-sizing:border-box;
       height:36px;
       padding:0 10px;
       transition:all 0.2s ease 0s;
       display:inline-block;      
-      width:280px;
+      width:100%;
  }
 
   #applicationForm textarea{
       border:1px solid #ccc;
-      border-radius:0px;      
+      border-radius:0px;
+	  box-sizing:border-box;      
       padding:10px;
-      width:280px;
+      width:100%;
       vertical-align:top;
  }
 
@@ -297,13 +302,17 @@ h4{font-size:16px;}
     line-height: 34px;
     border-radius: 0px;
     -webkit-user-select: none;
-    width:96px;
-  
+    width:98px;  
 }
+
 
 .submitAppForm, .appFormOpen{
     background-color:#BA4097;
     border:1px solid #ba4097;
+}
+
+.appFormOpen{
+    margin-right: 0px;
 }
 
 .submitAppForm{
@@ -318,3 +327,11 @@ h4{font-size:16px;}
 .appFormHidden{
     display:none;
 }
+
+ /*-----------------------------------------------------------------------------*/
+ /*                             SOCIAL SHARE                                    */
+ /*-----------------------------------------------------------------------------*/
+ 
+ .addthis_sharing_toolbox {
+	float:right;
+ }

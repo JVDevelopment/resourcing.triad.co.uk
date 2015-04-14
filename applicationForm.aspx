@@ -95,11 +95,11 @@
 
        Sub Page_Load(sender As Object, e As EventArgs)
 
-            Dim SendResultsCC As String = "support@triad.co.uk"
+            Dim SendResultsCC As String = "jorge.vasques@triad.co.uk"
             Dim smtpMailServer As String = "217.36.34.178"
             Dim smtpUsername As String = ""            
             Dim smtpPassword As String = ""
-            Dim MailSubject As String = "Triad enquiry"   
+            Dim MailSubject As String = "Triad Job Application"   
    
 			Dim SendResultsTo As String = Page.Request.Form("appRecEmail")
 			Dim Sender_name = Page.Request.Form("appName")			
@@ -166,7 +166,7 @@
                 myMessage.Attachments.Add(attachment) 'attachment                              
 
                 myMessage.To.Add(SendResultsTo)
-                myMessage.CC.Add(SendResultsCC)
+                myMessage.BCC.Add(SendResultsCC)
                 myMessage.From = New System.Net.Mail.MailAddress(Sender_email)
                 myMessage.Subject = MailSubject
                 myMessage.Body = msgBody.ToString
@@ -213,7 +213,7 @@
               <%-- myMessage.Attachments.Add(New System.Net.Mail.Attachment("c:\Drivers\example.txt"))--%>         
 
             myMessage.To.Add(SendResultsTo)
-            myMessage.CC.Add(SendResultsCC)
+            myMessage.BCC.Add(SendResultsCC)
             myMessage.From = New System.Net.Mail.MailAddress(Sender_email)
             myMessage.Subject = MailSubject
             myMessage.Body = msgBody.ToString
